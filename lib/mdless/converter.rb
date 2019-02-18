@@ -612,7 +612,7 @@ module CLIMarkdown
             match = Regexp.last_match
             last = find_color(match.pre_match)
             indent = match[1] || ''
-            "#{indent}#{c([:d, :red])}#{match[2]} " + (last ? last : xc)
+            "#{indent}#{c([:b, :red])}#{match[2]} " + (last ? last : xc)
           end
 
           # definition lists
