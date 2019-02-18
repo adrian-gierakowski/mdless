@@ -479,13 +479,13 @@ module CLIMarkdown
             ansi = ''
             case m[1].length
             when 1
-              ansi = c([:b, :black, :on_intense_white])
+              ansi = c([:b, :black, :on_white])
               pad = c([:b,:white])
-              pad += m[2].length + 2 > @cols ? "*"*m[2].length : "*"*(@cols - (m[2].length + 2))
+              # pad += m[2].length + 2 > @cols ? "*"*m[2].length : "*"*(@cols - (m[2].length + 2))
             when 2
               ansi = c([:b, :green, :on_black])
               pad = c([:b,:black])
-              pad += m[2].length + 2 > @cols ? "-"*m[2].length : "-"*(@cols - (m[2].length + 2))
+              # pad += m[2].length + 2 > @cols ? "-"*m[2].length : "-"*(@cols - (m[2].length + 2))
             when 3
               ansi = c([:u, :b, :yellow])
             when 4
